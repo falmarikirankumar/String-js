@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <h1 align="center">
+      JavaScript Questions
+      <br />
+      Strings
+    </h1>
+    <div class="box">
+      <h2>1. Count Characters.</h2>
+      <pre>
+    const countCharacters = (S) => { 
+    B=[0,0]
+        for(let i=0;i< S.length;i++){
+        if(S[i] === 'A'){
+            B[0]+=1
+        }
+        else if(S[i] === 'D'){
+            B[1]+=1
+        }
+        else{}
+        }
+        return B
+    };</pre
+      >
+    </div>
+    <div class="box">
+      <h2>2. Count the Heads.</h2>
+      <pre>
+    var Count_Occ = (s) => {
+        const alpha=[]
+        for(let i=0;i< s.length;i++){
+        alpha.push(s.charAt(i))
+        }
+        const re_val = alpha.filter((val,index)=>alpha.indexOf(val)!==alpha.lastIndexOf(val))
+        re_val.sort(re_val)
+        var newStr = ''
+        count = 1
+        for(let i=0;i< re_val.length;i++){
+        if(re_val[i] === re_val[i+1]){
+            count += 1
+        }
+        else{
+            newStr += re_val[i] + count
+            count = 1
+        }
+        }
+        
+        return newStr
+    };</pre
+      >
+    </div>
+    <div class="box">
+      <h2>3. Count the Vowels.</h2>
+      <pre>
+    var Count_Vowels= (S) => {
+    count=0
+    for(let i=0;i< S.length;i++){
+        if(S[i]==='a'||S[i]==='A'||S[i]==='i'||S[i]==='I'||S[i]==='O'||S[i]==='o'||S[i]==='e'||S[i]==='E'||S[i]==='u'||S[i]==='U'){
+        count+=1
+        }
+    }
+    return count  
+    };</pre
+      >
+    </div>
+    <div class="box">
+      <h2>4. Concatenate the Strings.</h2>
+      <pre>
+    var Concatenate_Strings = (S1, S2) => {
+    con=''
+    for(let i=0;i< S1.length;i++){
+        con+=S1.charAt(i)
+    }
+    for(let i=0;i< S2.length;i++){
+        con+=S2.charAt(i)
+    }
+    // return S1+S2 
+    return con
+    };</pre
+      >
+    </div>
+    <div class="box">
+      <h2>5. Find Length.</h2>
+      <pre>
+    const findLength = (S) => {
+    count =0
+    for(let i=0;i< S.length;i++){
+        count+=1
+    }
+    return count
+    };</pre
+      >
+    </div>
+    <div class="box">
+      <h2>6. Find the Winner.</h2>
+      <pre>
+    var Game_Winner = (S) => {
+    a=0
+    b=0
+    for(let i =0;i< S.length;i++){
+        if(S[i]==='A'){
+        a++;
+        }
+        else{
+        b++;
+        }
+    }
+    if(a>b){
+        return "Aditya"
+    }
+    else if(b>a){
+        return "Danish"
+    }
+    else{
+        return "Draw"
+    }
+    };</pre
+      >
+    </div>
+    <div class="box">
+      <h2>7. Join Strings.</h2>
+      <pre>
+    const joinStrings = (S, P) => 
+    {
+    // return S+P
+    // return S.concat(P)
+    join=''
+    for(let i=0;i< S.length;i++){
+        join +=S.charAt(i)
+    }
+    for(let i=0;i< P.length;i++){
+        join +=P.charAt(i)
+    }
+    return join
+    };</pre
+      >
+    </div>
+    <div class="box">
+      <h2>8. Palindrome Check.</h2>
+      <pre>
+    var Palin_Check = (str) =>{
+        //const forword =[]
+        //const backword =[]
+        //let count = 0
+        //for(let i = 0;i< str.length;i++){
+        //  forword.push(str.charAt(i))
+        //}
+        //for(let i = str.length-1;i>=0;i--){
+        //  backword.push(str.charAt(i))
+        //}
+        
+        //for(let i =0 ;i< str.length;i++){
+        //  if(forword[i]===backword[i]){
+        //    count+=1
+        //  }
+        //}
+        //if(count === str.length){
+        //  return "True"
+        //}
+        //else{
+        //return "False"
+    // }
+    f=0
+    b=str.length-1
+    count=0
+    while(f< str.length){
+        if(str[f]!==str[b]){
+        count+=1
+        break;
+        }
+        else{
+        f+=1
+        b-=1
+        }
+    }
+    if(count===0){
+        return 'True'
+    }
+    else{
+        return 'False'
+    }
+    };</pre
+      >
+    </div>
+    <div class="box">
+      <h2>9. Reverse the String.</h2>
+      <pre>
+    var Reverse_String = (str) => {
+    const tempArr = []
+    let rev_no = ''
+    
+    for(let i = str.length-1;i >= 0;i--){
+        tempArr.push(str.charAt(i))
+    }
+    for(let i = 0;i < tempArr.length;i++){
+        rev_no += tempArr[i]
+    }
+    return rev_no
+    };</pre
+      >
+    </div>
+    <div class="box">
+      <h2>10. Match the Strings.</h2>
+      <pre>
+    var String_Match = (S1,S2) => {
+        for(let i=0;i< S1.length;i++){
+        if(S1[i]===S2[i]){
+            
+        }
+        else{
+            return "NO"
+        }
+        }
+        return "YES"
+    };</pre
+      >
+    </div>
+    <div class="box">
+      <h2>11. String Replace.</h2>
+      <pre>
+    var Replace = (S, pattern , text) => {
+    rep = S.replace(pattern,text)
+    return rep
+    };</pre
+      >
+    </div>
+    <div class="box">
+      <h2>12. Split the String.</h2>
+      <pre>
+    var Split_the_string = (S) => {
+    let str ="\n"
+    let spl =S.split(str)
+    return spl
+    };</pre
+      >
+    </div>
+    <div class="box">
+      <h2>13. Count the Vowels and Consonants.</h2>
+      <pre>
+    var Count_Vowels= (S) => {
+    count=0
+    for(let i=0;i< S.length;i++){
+        if(S[i].toUpperCase()==='A'||S[i].toUpperCase()==='I'||S[i].toUpperCase()==='O'||S[i].toUpperCase()==='E'||S[i].toUpperCase()==='U'){
+        count+=1
+        }
+        // if(S[i]==='a'||S[i]==='A'||S[i]==='i'||S[i]==='I'||S[i]==='O'||S[i]==='o'||S[i]==='e'||S[i]==='E'||S[i]==='u'||S[i]==='U'){
+        //   count+=1
+        // }
+    }
+    return count
+    };
+    var Count_Consonants= (S) => {
+    count=0
+    for(let i=0;i< S.length;i++){
+        // if(S[i]==='a'||S[i]==='A'||S[i]==='i'||S[i]==='I'||S[i]==='O'||S[i]==='o'||S[i]==='e'||S[i]==='E'||S[i]==='u'||S[i]==='U'){
+        // }
+        if(S[i].toUpperCase()==='A'||S[i].toUpperCase()==='I'||S[i].toUpperCase()==='O'||S[i].toUpperCase()==='E'||S[i].toUpperCase()==='U'){
+        }
+        else{
+        count+=1
+        }
+    }
+    return count
+    };</pre
+      >
+    </div>
+  </body>
+</html>
